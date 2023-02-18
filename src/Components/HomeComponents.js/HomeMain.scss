@@ -1,0 +1,11 @@
+.home_main {
+
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../../assets/imgs/home_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc(100vh - 104px);
+    height: 100vh;
+}

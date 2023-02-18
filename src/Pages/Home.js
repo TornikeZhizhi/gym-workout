@@ -1,17 +1,16 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import HomeMain from '../Components/HomeComponents.js/HomeMain';
+
 
 
 
 
 const Home = () => {
 
-    const navigate = useNavigate()
+
 
     return (
-        <div>
-            home
-        </div>
+        <HomeMain/>
     );
 };
 
