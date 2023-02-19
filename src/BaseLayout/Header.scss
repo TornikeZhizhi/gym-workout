@@ -299,6 +299,13 @@
         height: 42px;
         width: 42px;
     }
-    
+    .nav__content  {
+        bottom: unset;
+        top: 80px;
+    }
+    .nav:before, .nav:after {
+        bottom: unset;
+        top: 80px;
+    }
     
   }
