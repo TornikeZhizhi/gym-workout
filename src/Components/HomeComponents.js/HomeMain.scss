@@ -188,18 +188,24 @@
 
 
   @media only screen and (max-width: 992px) {
-  .content h2 {
-    font-size: 32px;
-}
+      .content h2 {
+        font-size: 32px;
+    }
 
-.main_banner {
-  width: 100%;
-}
+    .main_banner {
+      width: 100%;
+    }
 
 
-.banner_bottom_text {
-  margin-top: 16px;
-  transform: scale(0.4);
-}
+    .banner_bottom_text {
+      margin-top: 16px;
+      transform: scale(0.4);
+    }
+
+    .home_main {
+
+      align-items: flex-start;
+      padding-top: calc(80px + 35%);
+    }
 
   }
