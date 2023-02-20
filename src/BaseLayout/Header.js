@@ -23,7 +23,7 @@ const hamburgerHandler = ()=> {
  
 useEffect(() => {
     const handleScroll = event => {
-        window.scrollY > 100 ? setScrollTop(true) : setScrollTop(false)
+        window.scrollY > 50 ? setScrollTop(true) : setScrollTop(false)
 
     };
   
