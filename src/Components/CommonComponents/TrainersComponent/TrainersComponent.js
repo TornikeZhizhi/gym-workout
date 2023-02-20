@@ -11,12 +11,14 @@ const dummyTrainer = [
     {name:"Jennifer Lenson",img:trainerJennifer},
     {name:"John Bridge",img:trainerJohn},
     {name:"Lidia Perry",img:trainerLidia},
-    {name:"Kane Jeferson",img:trainerKane},
+    {name:"Kane Jeferson",img:trainerKane}
+
+
 ]
 
 const TrainersComponent = () => {
     return (
-        <div className='trainers_comp_container'>
+        <div className='trainers_comp_container' id='trainer'>
             <div className='trainers_comp_title'>
                 <h2>Our Coaches</h2>
             </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import "./HomeMain.scss";
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 const HomeMain = () => {
@@ -19,6 +21,12 @@ const HomeMain = () => {
                         <div className="word3">Strong</div>
                     </div>
                 </div>
+                <Link className='scroll_link' to="trainer" spy={true} smooth={true} offset={0} duration={500}>
+                    <div class="scroll-container">
+                        <div class="scroller"></div>
+                    </div>
+                </Link>
+
             </div>
         </div>
     );

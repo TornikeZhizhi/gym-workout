@@ -10,10 +10,17 @@ const Home = () => {
 
 
 
+    const handleSetActive = (to)=> {
+        console.log(to);
+      }
+
     return (
         <>
+         
         <HomeMain/>
         <TrainersComponent/>
+      
+       
         </>
     );
 };

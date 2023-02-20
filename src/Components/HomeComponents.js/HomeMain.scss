@@ -185,6 +185,71 @@
     }
   }
 
+  .scroll-container{
+    width: 30px;
+    height: 60px;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .scroller{
+    width: 16px;
+    border-radius: 8px;
+    background-color: #fabf3d;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 34px;
+    animation: scroller 2s ease-out infinite;
+  }
+  
+  @keyframes scroller{
+    0%{
+      bottom: 34px;
+    }
+    5%{
+      top: 4px;
+    }
+    32%{    
+      bottom: 4px;
+    }
+    66%{
+      top: 34px;
+      bottom: 4px;
+    }
+    100%{
+      top: 4px;
+      bottom: 34px;
+    }
+  }
+
+  .scroll_link {
+    cursor: pointer;    
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    animation: scrolToggle 3s linear infinite;
+  }
+
+  @keyframes scrolToggle {
+
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translateY(0);
+
+    }
+  }
+
+
 
 
   @media only screen and (max-width: 992px) {
