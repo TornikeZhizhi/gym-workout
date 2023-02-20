@@ -27,3 +27,8 @@
   font-style: normal;
   font-display: swap;
 }
+
+
+body.overflow {
+  overflow: hidden;
+}

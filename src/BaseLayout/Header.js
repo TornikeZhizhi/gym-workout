@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "./Header.scss";
 
 import logo from "../assets/imgs/logo1.svg"
 import { Link, NavLink } from 'react-router-dom';
+import { HeaderTogglerTheme } from '../Contexts/HeaderTogglerContext';
 
 const Header = () => {
     
-const [menuToggler, setMenuToggler] = useState(false)
-const [disableClick, setDisableClick] = useState(true)
+
 const [ScrollTop, setScrollTop] = useState(false)
 
 
+var ctxHeaderToggler = useContext(HeaderTogglerTheme)
+
+
 const hamburgerHandler = ()=> {
-    if(disableClick){
-        setMenuToggler(!menuToggler)
-        setDisableClick(false)
-    }
-    setTimeout(function(){
-        setDisableClick(true)
-    },1200)
+    ctxHeaderToggler.menuToglerHandler()
 }
  
 useEffect(() => {
@@ -64,14 +61,14 @@ useEffect(() => {
                 </nav>
 
                 <div className="hamburger-icon" id="icon" onClick={hamburgerHandler}>
-                    <div className={`icon-1` + (menuToggler ? " a" : "")} id="a"></div>
-                    <div className={`icon-2` + (menuToggler ? " c" : "")} id="b"></div>
-                    <div className={`icon-3` + (menuToggler ? " b" : "")} id="c"></div>
+                    <div className={`icon-1` + (ctxHeaderToggler.menuToggler ? " a" : "")} id="a"></div>
+                    <div className={`icon-2` + (ctxHeaderToggler.menuToggler ? " c" : "")} id="b"></div>
+                    <div className={`icon-3` + (ctxHeaderToggler.menuToggler ? " b" : "")} id="c"></div>
                     <div className="clear"></div>
                 </div>
             </div>
 
-            <div className={`nav`+ (menuToggler ? " nav-active" : "")}>
+            <div className={`nav`+ (ctxHeaderToggler.menuToggler ? " nav-active" : "") + (ScrollTop ? " scrollTop" : " ")}>
                 <div className="nav__content">
                     <div className='nav_content_left'>
                     <nav className='navbar_x'>

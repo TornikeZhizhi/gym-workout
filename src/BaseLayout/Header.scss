@@ -272,7 +272,17 @@
     width: 150%;
 }
 
+.nav {
+    &.scrollTop {
+        &:before,&:after{
+            height: calc(100vh - 84px);
+        }
 
+        .nav__content {
+            height: calc(100vh - 104px);
+        }
+    }
+}
 .navbar_x {
 
 
@@ -300,6 +310,7 @@
 
 
 @media only screen and (min-width: 992px) {
+    
 
     .header {
 
@@ -329,6 +340,13 @@
 
 @media only screen and (max-width: 992px) {
 
+    .navbar_x ul li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .navbar_x ul li a {
+        font-size: 23px;
+    }
     .header {
 
         &.active {
@@ -380,7 +398,7 @@
         height: calc(100vh - 80px);
     }
 
-
+    
     .nav:before, .nav:after {
         height: calc(100vh - 80px);
     }
@@ -399,6 +417,18 @@
         bottom: unset;
         top: 80px;
     }
+
+    .nav {
+        &.scrollTop {
+
+            &:before, &:after {
+                bottom: unset;
+                 top: 53px;
+                 height: calc(100vh - 53px);
+            }
+    }}
+
+
     .nav:before, .nav:after {
         bottom: unset;
         top: 80px;

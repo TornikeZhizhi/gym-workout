@@ -1,6 +1,7 @@
 import {createBrowserRouter , RouterProvider} from "react-router-dom";
 import './App.css';
 import "./App.scss";
+import HeaderTogglerContext from "./Contexts/HeaderTogglerContext";
 import Root from "./PageRoot/Root";
 import Home from "./Pages/Home";
 import Trainers from "./Pages/Trainers";
@@ -25,10 +26,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
+      <HeaderTogglerContext>
         <RouterProvider router={router}/>
-       
-    </div>
+      </HeaderTogglerContext>   
   );
 }
 
