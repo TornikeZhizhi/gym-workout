@@ -24,7 +24,7 @@ const TrainersComponent = () => {
             </div>
             <div className='trainers_comp_wrapper'>
                 {dummyTrainer.map(item=>
-                    <div className='trainers_comp_box'>
+                    <div className='trainers_comp_box' key={item.name}>
                         <div className='trainers_comp_img'>
                             <img src={item.img} alt={item.name}/>
                         </div>

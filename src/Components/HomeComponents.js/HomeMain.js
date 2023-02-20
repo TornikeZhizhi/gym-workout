@@ -21,9 +21,9 @@ const HomeMain = () => {
                         <div className="word3">Strong</div>
                     </div>
                 </div>
-                <Link className='scroll_link' to="trainer" spy={true} smooth={true} offset={0} duration={500}>
-                    <div class="scroll-container">
-                        <div class="scroller"></div>
+                <Link className='scroll_link' to="trainer" spy={true} smooth={true} offset={20} duration={500}>
+                    <div className="scroll-container">
+                        <div className="scroller"></div>
                     </div>
                 </Link>
 

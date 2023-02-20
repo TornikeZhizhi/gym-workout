@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Header.scss";
 
 import logo from "../assets/imgs/logo1.svg"
@@ -8,7 +8,7 @@ const Header = () => {
     
 const [menuToggler, setMenuToggler] = useState(false)
 const [disableClick, setDisableClick] = useState(true)
-
+const [ScrollTop, setScrollTop] = useState(false)
 
 
 const hamburgerHandler = ()=> {
@@ -21,11 +21,25 @@ const hamburgerHandler = ()=> {
     },1200)
 }
  
+useEffect(() => {
+    const handleScroll = event => {
+        window.scrollY > 100 ? setScrollTop(true) : setScrollTop(false)
+
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
     
     return (
             <>
            
-            <div className='header'>
+            <div className={`header` + (ScrollTop ? " active" : " ")}>
                 <Link to="/" className="header_logo">
                     <img src={logo} alt=""/>
                 </Link>
