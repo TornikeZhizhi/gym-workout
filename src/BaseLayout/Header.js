@@ -7,15 +7,26 @@ import { Link, NavLink } from 'react-router-dom';
 const Header = () => {
     
 const [menuToggler, setMenuToggler] = useState(false)
+const [disableClick, setDisableClick] = useState(true)
 
 
-    
+
+const hamburgerHandler = ()=> {
+    if(disableClick){
+        setMenuToggler(!menuToggler)
+        setDisableClick(false)
+    }
+    setTimeout(function(){
+        setDisableClick(true)
+    },1200)
+}
+ 
     
     return (
             <>
            
             <div className='header'>
-                <Link to="/" class="header_logo">
+                <Link to="/" className="header_logo">
                     <img src={logo} alt=""/>
                 </Link>
                 <nav className='navbar'>
@@ -24,30 +35,21 @@ const [menuToggler, setMenuToggler] = useState(false)
                             <NavLink to="/">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/">About</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/">Prices</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/">Trainers</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/">Contact Us</NavLink>
                         </li>
                     </ul>
                 </nav>
 
-                <div className="hamburger-icon" id="icon" onClick={()=>setMenuToggler(!menuToggler)}>
+                <div className="hamburger-icon" id="icon" onClick={hamburgerHandler}>
                     <div className={`icon-1` + (menuToggler ? " a" : "")} id="a"></div>
                     <div className={`icon-2` + (menuToggler ? " c" : "")} id="b"></div>
                     <div className={`icon-3` + (menuToggler ? " b" : "")} id="c"></div>
@@ -55,8 +57,8 @@ const [menuToggler, setMenuToggler] = useState(false)
                 </div>
             </div>
 
-            <div class={`nav`+ (menuToggler ? " nav-active" : "")}>
-                <div class="nav__content">
+            <div className={`nav`+ (menuToggler ? " nav-active" : "")}>
+                <div className="nav__content">
                     <div className='nav_content_left'>
                     <nav className='navbar_x'>
                         <ul>

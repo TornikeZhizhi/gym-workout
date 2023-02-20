@@ -7,16 +7,16 @@ const HomeMain = () => {
         <div className='home_main'>
             <div className='main_banner'>
 
-                <div class="content">
+                <div className="content">
                     <h2>Change Your Life !!!</h2>
                     <h2>Change Your Life !!!</h2>
 	            </div>
                 <div className='banner_bottom_text'>
                     <span>always be</span>
-                    <div class="message">
-                        <div class="word1">Healthy</div>
-                        <div class="word2">Happy</div>
-                        <div class="word3">Strong</div>
+                    <div className="message">
+                        <div className="word1">Healthy</div>
+                        <div className="word2">Happy</div>
+                        <div className="word3">Strong</div>
                     </div>
                 </div>
             </div>
