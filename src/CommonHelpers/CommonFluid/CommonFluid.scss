@@ -1,0 +1,15 @@
+.common_fluid{
+
+    width: 100%;
+    padding: 20px 0 100px 0;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .common_fluid {
+        width: 100%;
+        padding: 10px 0 30px 0;
+    }
+}

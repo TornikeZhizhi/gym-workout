@@ -4,6 +4,9 @@ import trainerJennifer from "../../../assets/imgs/trainer_jennifer.jpg";
 import trainerJohn from "../../../assets/imgs/trainer_john.jpg";
 import trainerLidia from "../../../assets/imgs/trainer_lidia.jpg";
 import trainerKane from "../../../assets/imgs/trainer_kane.jpg";
+import CommonTitle from '../../../CommonHelpers/CommonTitle/CommonTitle';
+import CommonFluid from '../../../CommonHelpers/CommonFluid/CommonFluid';
+import CommonBoxWrappers from '../../../CommonHelpers/CommonBoxWrappers/CommonBoxWrappers';
 
 
 const dummyTrainer = [
@@ -18,25 +21,23 @@ const dummyTrainer = [
 
 const TrainersComponent = () => {
     return (
-        <div className='trainers_comp_container' id='trainer'>
-            <div className='trainers_comp_title'>
-                <h2>Our Coaches</h2>
-            </div>
-            <div className='trainers_comp_wrapper'>
-                {dummyTrainer.map(item=>
-                    <div className='trainers_comp_box' key={item.name}>
-                        <div className='trainers_comp_img'>
-                            <img src={item.img} alt={item.name}/>
+        <CommonFluid dataId={"trainer"}>
+            <CommonTitle title={"Our Coaches"}/>
+                <CommonBoxWrappers>
+                    {dummyTrainer.map(item=>
+                        <div className='trainers_comp_box' key={item.name}>
+                            <div className='trainers_comp_img'>
+                                <img src={item.img} alt={item.name}/>
+                            </div>
+                            <div className='trainers_comp_title'>
+                                <h3>
+                                    {item.name}
+                                </h3>
+                            </div>
                         </div>
-                        <div className='trainers_comp_title'>
-                            <h3>
-                                {item.name}
-                            </h3>
-                        </div>
-                     </div>
-                )}
-            </div>
-        </div>
+                    )}
+                </CommonBoxWrappers>
+        </CommonFluid>
     );
 };
 

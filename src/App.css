@@ -28,6 +28,9 @@
   font-display: swap;
 }
 
+body {
+  background-color: #000;
+}
 
 body.overflow {
   overflow: hidden;

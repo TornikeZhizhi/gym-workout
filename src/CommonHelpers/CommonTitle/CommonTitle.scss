@@ -1,0 +1,19 @@
+.common_title {
+    text-align: center;
+    width: 100%;
+    h3 {
+
+        font-size: 60px;
+        color: #fff;
+    }
+
+}
+
+
+@media only screen and (max-width: 992px) {
+
+
+    .common_title h3 {
+        font-size: 33px;
+    }
+}

@@ -1,0 +1,18 @@
+.common_box_wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 50px auto 0;
+    padding: 0 10px;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    .common_box_wrapper {
+        margin: 12px auto 0;
+        padding: 0 15px;
+    }
+}

@@ -1,5 +1,7 @@
 import React from 'react';
+import MembershipComponent from '../Components/CommonComponents/MembershipComponent/MembershipComponent';
 import TrainersComponent from '../Components/CommonComponents/TrainersComponent/TrainersComponent';
+import TrainingProgramsComponent from '../Components/CommonComponents/TrainingProgramsComponent/TrainingProgramsComponent';
 import HomeMain from '../Components/HomeComponents.js/HomeMain';
 
 
@@ -19,8 +21,8 @@ const Home = () => {
          
         <HomeMain/>
         <TrainersComponent/>
-      
-       
+        <MembershipComponent/>
+         <TrainingProgramsComponent/>
         </>
     );
 };

@@ -22,8 +22,8 @@
     max-width: 950px;
     margin: 50px auto 0;
     padding: 0 10px;
-
-    &>div {
+}
+    .trainers_comp_box {
         flex: 0 0 23%;
         max-width: 23%;
         box-shadow: 0px 0px 8px 1px #00000057;
@@ -49,7 +49,7 @@
 
                 &:hover {
                     img {
-                        transform: scale(1.1) rotate(3deg);
+                        transform: scale(1.1) rotate(-3deg);
                     }
                 }
         }
@@ -60,7 +60,7 @@
             padding: 15px 0;
             background-color: #fabf3d;
             position: relative;
-            z-index: 10;
+            z-index: 1;
 
             h3 {
                 font-size: 23px;
@@ -70,7 +70,7 @@
         }
 
     }
-}
+
 
 
 
@@ -86,27 +86,24 @@
         padding: 12px 0 40px 0;
     }
 
-    .trainers_comp_wrapper > div {
+     .trainers_comp_box {
         flex: 0 0 48%;
         max-width: 48%;
         margin-bottom: 20px;
     }
 
-    .trainers_comp_wrapper .trainers_comp_box .trainers_comp_img {
+     .trainers_comp_box .trainers_comp_img {
         height: 150px;
     }
 
-    .trainers_comp_wrapper .trainers_comp_box .trainers_comp_title h3 {
+     .trainers_comp_box .trainers_comp_title h3 {
         font-size: 20px;
     }
 
 
-    .trainers_comp_wrapper .trainers_comp_box .trainers_comp_title {
+     .trainers_comp_box .trainers_comp_title {
         padding: 8px 0;
     }
 
-    .trainers_comp_wrapper {
-       
-        margin: 15px auto 0;
-    }
+    
 }
