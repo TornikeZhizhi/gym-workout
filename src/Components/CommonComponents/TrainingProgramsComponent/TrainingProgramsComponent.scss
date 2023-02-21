@@ -75,6 +75,10 @@
     .our_programs_box {
         width: 100%;
         max-width: 100%;
+
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
     }
 
     .our_programs_box .op_title h4 {
