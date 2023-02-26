@@ -1,9 +1,9 @@
 import React from 'react';
 import "./CommonFluid.scss";
-const CommonFluid = (props) => {
+const CommonFluid = ({children, headerPadding, dataId}) => {
     return (
-        <div className='common_fluid' id={props.dataId ? props.dataId : ""}>
-            {props.children}
+        <div className={`common_fluid ` + (headerPadding ? headerPadding : "") }  id={dataId ? dataId : ""}>
+            {children}
         </div>
     );
 };

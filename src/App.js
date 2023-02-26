@@ -1,10 +1,10 @@
 import {createBrowserRouter , RouterProvider} from "react-router-dom";
 import './App.css';
-import "./App.scss";
 import HeaderTogglerContext from "./Contexts/HeaderTogglerContext";
 import Root from "./PageRoot/Root";
 import Home from "./Pages/Home";
 import Trainers from "./Pages/Trainers";
+import About from "./Pages/About";
 
 
 
@@ -17,6 +17,7 @@ const router = createBrowserRouter([
     children:[
       {path:"/", element: <Home/>},
       {path:"/trainers", element: <Trainers/>},
+      {path:"/about-us", element: <About/>},
   
     ]
   }
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
+    
       <HeaderTogglerContext>
         <RouterProvider router={router}/>
       </HeaderTogglerContext>   

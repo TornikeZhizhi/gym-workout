@@ -35,3 +35,25 @@ body {
 body.overflow {
   overflow: hidden;
 }
+
+p {
+  margin-bottom: 15px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 1px;
+  background-color: #000;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fabf3d; 
+  border-radius: 1px;
+}
+

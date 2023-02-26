@@ -27,8 +27,8 @@ const TrainingProgramsComponent = () => {
         <CommonFluid>
             <CommonTitle title={"Our Programs"}/>
                 <CommonBoxWrappers>
-                    {dumyProgramsData.map((item)=>
-                        <div className='our_programs_box'>
+                    {dumyProgramsData.map((item,index)=>
+                        <div className='our_programs_box' key={index}>
                             <div className='op_img'>
                                 <img src={item.img} alt=''/>
                             </div>

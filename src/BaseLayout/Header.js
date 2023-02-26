@@ -2,13 +2,17 @@ import React, { useContext, useEffect, useState } from 'react';
 import "./Header.scss";
 
 import logo from "../assets/imgs/logo1.svg"
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink,useLocation } from 'react-router-dom';
 import { HeaderTogglerTheme } from '../Contexts/HeaderTogglerContext';
 
 const Header = () => {
     
-
 const [ScrollTop, setScrollTop] = useState(false)
+// const [loader,setLoader] = useState(false)
+
+const [scrollPercent, setScrollPercent] = useState(0)
+
+
 
 
 var ctxHeaderToggler = useContext(HeaderTogglerTheme)
@@ -19,11 +23,25 @@ const hamburgerHandler = ()=> {
 }
  
 useEffect(() => {
+  
     const handleScroll = event => {
-        window.scrollY > 50 ? setScrollTop(true) : setScrollTop(false)
+        window.scrollY > 50 ? setScrollTop(true) : setScrollTop(false);
+
+        const scrollPx = document.documentElement.scrollTop;
+        const winHeightPx =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrolled = `${scrollPx / winHeightPx * 100}%`;
+        console.log(scrolled,scrollPx,winHeightPx)
+        if(scrollPx == 0){
+            setScrollPercent(0)
+        }else {
+            setScrollPercent(scrolled)
+
+        }
 
     };
-  
+    
     window.addEventListener('scroll', handleScroll);
   
     return () => {
@@ -32,21 +50,31 @@ useEffect(() => {
   }, []);
 
 
+
+  const loaderHandler =()=>{
+
+    // setLoader(true)
+    
+    // setTimeout(()=>{
+    //     setLoader(false)
+    // },1000)
+  }
+
     
     return (
             <>
-           
-            <div className={`header` + (ScrollTop ? " active" : " ")}>
+             {/* <div className={`loader` + (loader ? " active" : " ")}></div> */}
+            <header className={`header` + (ScrollTop ? " active" : " ")}>
                 <Link to="/" className="header_logo">
                     <img src={logo} alt=""/>
                 </Link>
                 <nav className='navbar'>
                     <ul>
                         <li>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/" onClick={loaderHandler}>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">About</NavLink>
+                            <NavLink to="/about-us" onClick={loaderHandler}>About</NavLink>
                         </li>
                         <li>
                             <NavLink to="/">Prices</NavLink>
@@ -66,7 +94,8 @@ useEffect(() => {
                     <div className={`icon-3` + (ctxHeaderToggler.menuToggler ? " b" : "")} id="c"></div>
                     <div className="clear"></div>
                 </div>
-            </div>
+                <div className='scrollIndicator' style={{width:scrollPercent}}> </div>
+            </header>
 
             <div className={`nav`+ (ctxHeaderToggler.menuToggler ? " nav-active" : "") + (ScrollTop ? " scrollTop" : " ")}>
                 <div className="nav__content">
@@ -95,6 +124,8 @@ useEffect(() => {
                     
                 </div>
             </div>
+
+            
             </>
     );
 };
