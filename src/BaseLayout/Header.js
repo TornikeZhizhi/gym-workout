@@ -11,7 +11,7 @@ const [ScrollTop, setScrollTop] = useState(false)
 // const [loader,setLoader] = useState(false)
 
 const [scrollPercent, setScrollPercent] = useState(0)
-
+const location = useLocation()
 
 
 
@@ -23,7 +23,14 @@ const hamburgerHandler = ()=> {
 }
  
 useEffect(() => {
-  
+
+    if(document.documentElement.scrollHeight == document.documentElement.clientHeight){
+        setScrollPercent(100+"%")
+    }else {
+        setScrollPercent(0+"%")
+    }
+    
+
     const handleScroll = event => {
         window.scrollY > 50 ? setScrollTop(true) : setScrollTop(false);
 
@@ -32,11 +39,10 @@ useEffect(() => {
           document.documentElement.scrollHeight -
           document.documentElement.clientHeight;
         const scrolled = `${scrollPx / winHeightPx * 100}%`;
-        console.log(scrolled,scrollPx,winHeightPx)
         if(scrollPx == 0){
-            setScrollPercent(0)
+            setScrollPercent(100 + "%")
         }else {
-            setScrollPercent(scrolled)
+            setScrollPercent(scrolled) 
 
         }
 
@@ -47,7 +53,7 @@ useEffect(() => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [location]);
 
 
 
