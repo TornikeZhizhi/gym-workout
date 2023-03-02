@@ -12,8 +12,13 @@ const HeaderTogglerContext = (props)=> {
 
  const menuToglerHandler = ()=>{
     setMenuToggler(!menuToggler)
-
  }
+
+
+ const menuClose = ()=>{
+  setMenuToggler(false)
+ }
+
  useEffect(() => {
 
     document.body.classList.toggle('overflow', menuToggler);
@@ -23,7 +28,8 @@ const HeaderTogglerContext = (props)=> {
 return(
     <HeaderTogglerTheme.Provider value={{
         menuToggler:menuToggler,
-        menuToglerHandler:menuToglerHandler
+        menuToglerHandler:menuToglerHandler,
+        menuClose:menuClose
         }}>
         {props.children}
     </HeaderTogglerTheme.Provider>

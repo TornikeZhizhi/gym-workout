@@ -18,6 +18,11 @@ const location = useLocation()
 var ctxHeaderToggler = useContext(HeaderTogglerTheme)
 
 
+const menuCloseHandler = ()=>{
+    ctxHeaderToggler.menuClose()
+
+}
+
 const hamburgerHandler = ()=> {
     ctxHeaderToggler.menuToglerHandler()
 }
@@ -77,19 +82,19 @@ useEffect(() => {
                 <nav className='navbar'>
                     <ul>
                         <li>
-                            <NavLink to="/" onClick={loaderHandler}>Home</NavLink>
+                            <NavLink to="/" onClick={menuCloseHandler}>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about-us" onClick={loaderHandler}>About</NavLink>
+                            <NavLink to="/about-us" onClick={menuCloseHandler}>About</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Prices</NavLink>
+                            <NavLink to="/" onClick={menuCloseHandler}>Prices</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Trainers</NavLink>
+                            <NavLink to="/" onClick={menuCloseHandler}>Trainers</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Contact Us</NavLink>
+                            <NavLink to="/" onClick={menuCloseHandler}>Contact Us</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -108,19 +113,19 @@ useEffect(() => {
                     <div className='nav_content_left'>
                     <nav className='navbar_x'>
                         <ul>
-                            <li className='nav__list-item'>
+                            <li className='nav__list-item' onClick={menuCloseHandler}>
                                 <NavLink to="/">Home</NavLink>
                             </li>
-                            <li className='nav__list-item'>
+                            <li className='nav__list-item' onClick={menuCloseHandler}>
                                 <NavLink to="/about-us">About</NavLink>
                             </li>
-                            <li className='nav__list-item'>
+                            <li className='nav__list-item' onClick={menuCloseHandler}>
                                 <NavLink to="/">Prices</NavLink>
                             </li>
-                            <li className='nav__list-item'>
+                            <li className='nav__list-item' onClick={menuCloseHandler}>
                                 <NavLink to="/">Trainers</NavLink>
                             </li>
-                            <li className='nav__list-item'>
+                            <li className='nav__list-item' onClick={menuCloseHandler}>
                                 <NavLink to="/">Contact Us</NavLink>
                             </li>
                         </ul>
