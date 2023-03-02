@@ -7,7 +7,7 @@ import "./AboutusComponent.scss";
 
 const AboutusComponent = () => {
     return (
-            <CommonFluid headerPadding={"headerPadding"}>
+            <CommonFluid headerPadding={"headerPadding min-height"}>
                 <CommonTitle title={"About Us"}/>
 
                 <CommonBoxWrappers>
