@@ -30,6 +30,7 @@ const hamburgerHandler = ()=> {
 useEffect(() => {
     window.scrollTo(0, 0);
     if(document.documentElement.scrollHeight == document.documentElement.clientHeight){
+        console.log("Ss0")
         setScrollPercent(100+"%")
     }else {
         setScrollPercent(0+"%")
@@ -45,7 +46,8 @@ useEffect(() => {
           document.documentElement.clientHeight;
         const scrolled = `${scrollPx / winHeightPx * 100}%`;
         if(scrollPx == 0){
-            setScrollPercent(100 + "%")
+               console.log("Ss1")
+            // setScrollPercent(100 + "%")
         }else {
             setScrollPercent(scrolled) 
 
@@ -91,7 +93,7 @@ useEffect(() => {
                             <NavLink to="/" onClick={menuCloseHandler}>Prices</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/" onClick={menuCloseHandler}>Trainers</NavLink>
+                            <NavLink to="/trainers" onClick={menuCloseHandler}>Trainers</NavLink>
                         </li>
                         <li>
                             <NavLink to="/" onClick={menuCloseHandler}>Contact Us</NavLink>
@@ -123,7 +125,7 @@ useEffect(() => {
                                 <NavLink to="/">Prices</NavLink>
                             </li>
                             <li className='nav__list-item' onClick={menuCloseHandler}>
-                                <NavLink to="/">Trainers</NavLink>
+                                <NavLink to="/trainers">Trainers</NavLink>
                             </li>
                             <li className='nav__list-item' onClick={menuCloseHandler}>
                                 <NavLink to="/">Contact Us</NavLink>
