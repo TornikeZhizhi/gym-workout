@@ -8,21 +8,30 @@ import message_img1 from "../assets/imgs/message1.jpg";
 import message_img2 from "../assets/imgs/message2.jpg";
 import StrengthTrainingComponent from '../Components/CommonComponents/StrengthTrainingComponent/StrengthTrainingComponent';
 
+import trainerJennifer from "../assets/imgs/trainer_jennifer.jpg";
+import trainerJohn from "../assets/imgs/trainer_john.jpg";
+import trainerLidia from "../assets/imgs/trainer_lidia.jpg";
+import trainerKane from "../assets/imgs/trainer_kane.jpg";
 
 
 const Home = () => {
 
 
 
-    const handleSetActive = (to)=> {
-        console.log(to);
-      }
+    const dummyTrainer = [
+        {name:"Jennifer Lenson",img:trainerJennifer},
+        {name:"John Bridge",img:trainerJohn},
+        {name:"Lidia Perry",img:trainerLidia},
+        {name:"Kane Jeferson",img:trainerKane}
+    
+    ]
+    
 
     return (
         <>
          
         <HomeMain/>
-        <TrainersComponent/>
+        <TrainersComponent dummyTrainer={dummyTrainer}/>
         <CommonMessageBox image={message_img1} text={"Become the best version of yourself"}/>
          <TrainingProgramsComponent/>
         <CommonMessageBox image={message_img2} text={"Overcome your insecurities"}/>

@@ -17,7 +17,6 @@ const CommonHeaderBackground = () => {
 
             </div>
         </div>
-        <TrainersComponent/>
         </>
     );
 };
