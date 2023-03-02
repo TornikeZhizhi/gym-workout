@@ -7,6 +7,7 @@ import HomeMain from '../Components/HomeComponents.js/HomeMain';
 
 import message_img1 from "../assets/imgs/message1.jpg";
 import message_img2 from "../assets/imgs/message2.jpg";
+import StrengthTrainingComponent from '../Components/CommonComponents/StrengthTrainingComponent/StrengthTrainingComponent';
 
 
 
@@ -27,6 +28,7 @@ const Home = () => {
         <MembershipComponent/>
          <TrainingProgramsComponent/>
         <CommonMessageBox image={message_img2} text={"Overcome your insecurities"}/>
+        <StrengthTrainingComponent/>
         </>
     );
 };
