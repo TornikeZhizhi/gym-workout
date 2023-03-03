@@ -30,7 +30,6 @@ const hamburgerHandler = ()=> {
 useEffect(() => {
     window.scrollTo(0, 0);
     if(document.documentElement.scrollHeight == document.documentElement.clientHeight){
-        console.log("Ss0")
         setScrollPercent(100+"%")
     }else {
         setScrollPercent(0+"%")
@@ -46,7 +45,6 @@ useEffect(() => {
           document.documentElement.clientHeight;
         const scrolled = `${scrollPx / winHeightPx * 100}%`;
         if(scrollPx == 0){
-               console.log("Ss1")
             // setScrollPercent(100 + "%")
         }else {
             setScrollPercent(scrolled) 

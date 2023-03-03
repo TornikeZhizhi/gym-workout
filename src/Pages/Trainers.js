@@ -15,10 +15,10 @@ const Trainers = () => {
         {name:"John Bridge",img:trainerJohn},
         {name:"Lidia Perry",img:trainerLidia},
         {name:"Kane Jeferson",img:trainerKane},
-        {name:"Jennifer Lenson",img:trainerJennifer},
         {name:"John Bridge",img:trainerJohn},
+        {name:"Jennifer Lenson",img:trainerJennifer},
+        {name:"Kane Jeferson",img:trainerKane},
         {name:"Lidia Perry",img:trainerLidia},
-        {name:"Kane Jeferson",img:trainerKane}
     
     ]
 

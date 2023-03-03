@@ -4,6 +4,7 @@ import "./TrainersComponent.scss";
 import CommonTitle from '../../../CommonHelpers/CommonTitle/CommonTitle';
 import CommonFluid from '../../../CommonHelpers/CommonFluid/CommonFluid';
 import CommonBoxWrappers from '../../../CommonHelpers/CommonBoxWrappers/CommonBoxWrappers';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -14,13 +15,17 @@ const TrainersComponent = ({dummyTrainer}) => {
                 <CommonBoxWrappers>
                     {dummyTrainer.map(item=>
                         <div className='trainers_comp_box' key={item.name}>
-                            <div className='trainers_comp_img'>
-                                <img src={item.img} alt={item.name}/>
-                            </div>
+                            <NavLink to={`/trainers/${item.name}`}>
+                                <div className='trainers_comp_img'>
+                                    <img src={item.img} alt={item.name}/>
+                                </div>
+                            </NavLink>
                             <div className='trainers_comp_title'>
-                                <h3>
-                                    {item.name}
-                                </h3>
+                                <NavLink to={`/trainers/${item.name}`}>
+                                    <h3>
+                                        {item.name}
+                                    </h3>
+                                </NavLink>
                             </div>
                         </div>
                     )}
