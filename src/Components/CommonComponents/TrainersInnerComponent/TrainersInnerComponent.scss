@@ -140,6 +140,9 @@
 
     .trainers_inner_img {
         height: 100vw;
+        img {
+            object-position: top;
+        }
     }
 
     .trainers_inner_info_body {
