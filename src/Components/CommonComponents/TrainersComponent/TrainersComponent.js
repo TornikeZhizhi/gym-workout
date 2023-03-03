@@ -11,7 +11,9 @@ import { NavLink } from 'react-router-dom';
 const TrainersComponent = ({dummyTrainer}) => {
     return (
         <CommonFluid dataId={"trainer"}>
-            <CommonTitle title={"Our Coaches"}/>
+            <NavLink to="/trainers">
+                <CommonTitle title={"Our Coaches"}/>
+            </NavLink>
                 <CommonBoxWrappers>
                     {dummyTrainer.map(item=>
                         <div className='trainers_comp_box' key={item.name}>

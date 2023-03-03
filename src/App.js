@@ -5,6 +5,7 @@ import Root from "./PageRoot/Root";
 import Home from "./Pages/Home";
 import Trainers from "./Pages/Trainers";
 import About from "./Pages/About";
+import Prices from "./Pages/Prices";
 import TrainersInner from "./Pages/TrainersInner";
 
 
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       {path:"/trainers", element: <Trainers/>},
       {path:"/trainers/:id", element: <TrainersInner/>},
       {path:"/about-us", element: <About/>},
+      {path:"/prices", element: <Prices/>},
   
     ]
   }

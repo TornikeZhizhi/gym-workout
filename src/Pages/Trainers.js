@@ -7,7 +7,7 @@ import trainerJennifer from "../assets/imgs/trainer_jennifer.jpg";
 import trainerJohn from "../assets/imgs/trainer_john.jpg";
 import trainerLidia from "../assets/imgs/trainer_lidia.jpg";
 import trainerKane from "../assets/imgs/trainer_kane.jpg";
-
+import trainerBg from "../assets/imgs/trainer_bg3.jpg";
 const Trainers = () => {
 
     const dummyTrainer = [
@@ -24,7 +24,9 @@ const Trainers = () => {
 
     return (
         <>
-        <CommonHeaderBackground/>
+        <CommonHeaderBackground title="OUR TRAINERS"
+         text="MEET OUR INSTRUCTORS"
+         img={trainerBg}/>
         <TrainersComponent dummyTrainer={dummyTrainer} />
         </>
     );

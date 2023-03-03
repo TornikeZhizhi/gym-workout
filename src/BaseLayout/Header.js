@@ -85,13 +85,13 @@ useEffect(() => {
                             <NavLink to="/" onClick={menuCloseHandler}>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about-us" onClick={menuCloseHandler}>About</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/" onClick={menuCloseHandler}>Prices</NavLink>
+                            <NavLink to="/prices" onClick={menuCloseHandler}>Prices</NavLink>
                         </li>
                         <li>
                             <NavLink to="/trainers" onClick={menuCloseHandler}>Trainers</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about-us" onClick={menuCloseHandler}>About</NavLink>
                         </li>
                         <li>
                             <NavLink to="/" onClick={menuCloseHandler}>Contact Us</NavLink>
@@ -117,13 +117,13 @@ useEffect(() => {
                                 <NavLink to="/">Home</NavLink>
                             </li>
                             <li className='nav__list-item' onClick={menuCloseHandler}>
-                                <NavLink to="/about-us">About</NavLink>
-                            </li>
-                            <li className='nav__list-item' onClick={menuCloseHandler}>
-                                <NavLink to="/">Prices</NavLink>
+                                <NavLink to="/prices">Prices</NavLink>
                             </li>
                             <li className='nav__list-item' onClick={menuCloseHandler}>
                                 <NavLink to="/trainers">Trainers</NavLink>
+                            </li>
+                            <li className='nav__list-item' onClick={menuCloseHandler}>
+                                <NavLink to="/about-us">About</NavLink>
                             </li>
                             <li className='nav__list-item' onClick={menuCloseHandler}>
                                 <NavLink to="/">Contact Us</NavLink>

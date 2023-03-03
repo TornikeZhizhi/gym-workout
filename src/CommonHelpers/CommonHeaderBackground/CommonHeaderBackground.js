@@ -4,15 +4,15 @@ import TrainingProgramsComponent from '../../Components/CommonComponents/Trainin
 import CommonFluid from '../CommonFluid/CommonFluid';
 import "./CommonHeaderBackground.scss";
 
-const CommonHeaderBackground = () => {
+const CommonHeaderBackground = ({title,text,img}) => {
     return (
         <>
-        <div className='bg_fluid'>
+        <div className='bg_fluid'style={{backgroundImage: `url(${img})`}}>
             <div className='bg_container'>
 
                 <div className='bg_titl_box'>
-                    <h3>OUR TRAINERS</h3>
-                    <span>MEET OUR INSTRUCTORS</span>
+                    <h3>{title}</h3>
+                    <span>{text}</span>
                 </div>
 
             </div>
