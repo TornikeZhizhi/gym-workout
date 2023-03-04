@@ -7,6 +7,7 @@ import Trainers from "./Pages/Trainers";
 import About from "./Pages/About";
 import Prices from "./Pages/Prices";
 import TrainersInner from "./Pages/TrainersInner";
+import ModalContext from "./Contexts/ModalContext";
 
 
 
@@ -31,10 +32,12 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    
+
+    <ModalContext>
       <HeaderTogglerContext>
         <RouterProvider router={router}/>
       </HeaderTogglerContext>   
+    </ModalContext>
   );
 }
 
