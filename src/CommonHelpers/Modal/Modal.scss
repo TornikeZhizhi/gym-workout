@@ -92,10 +92,14 @@
 
   
 @media only screen and (max-width: 992px){
-
-    .contact-form {
-        width: 100%;
-        border-radius: 9px;
-        padding: 25px 15px;
+    .modal_fluid {
+        .modal_container {
+            .contact-form {
+                width: 100%;
+                border-radius: 9px;
+                padding: 25px 15px;
+            }
+        }
     }
+    
 }
