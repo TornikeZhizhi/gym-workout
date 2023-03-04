@@ -94,7 +94,7 @@ useEffect(() => {
                             <NavLink to="/about-us" onClick={menuCloseHandler}>About</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/" onClick={menuCloseHandler}>Contact Us</NavLink>
+                            <NavLink to="/contact" onClick={menuCloseHandler}>Contact Us</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -126,7 +126,7 @@ useEffect(() => {
                                 <NavLink to="/about-us">About</NavLink>
                             </li>
                             <li className='nav__list-item' onClick={menuCloseHandler}>
-                                <NavLink to="/">Contact Us</NavLink>
+                                <NavLink to="/contact">Contact Us</NavLink>
                             </li>
                         </ul>
                      </nav>

@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Trainers from "./Pages/Trainers";
 import About from "./Pages/About";
 import Prices from "./Pages/Prices";
+import Contact from "./Pages/Contact";
 import TrainersInner from "./Pages/TrainersInner";
 import ModalContext from "./Contexts/ModalContext";
 
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       {path:"/trainers/:id", element: <TrainersInner/>},
       {path:"/about-us", element: <About/>},
       {path:"/prices", element: <Prices/>},
+      {path:"/contact", element: <Contact/>},
   
     ]
   }
