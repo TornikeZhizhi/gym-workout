@@ -419,9 +419,7 @@
     }
 
     
-    .nav:before, .nav:after {
-        height: calc(100vh - 80px);
-    }
+    
 
     .icon-1, .icon-2, .icon-3 {
         left: 20%;
@@ -451,7 +449,8 @@
 
     .nav:before, .nav:after {
         bottom: unset;
-        top: 80px;
+        top: 71px;
+        height: calc(100vh - 69px);
     }
     
   }
