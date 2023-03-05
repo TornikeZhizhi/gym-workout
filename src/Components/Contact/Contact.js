@@ -16,8 +16,11 @@ const ContactComponent = () => {
                 <div className='form_wrapper'>
                     <h3>Contact Us</h3>
                     <form id="email-form" name="email-form" data-name="Email Form">
+                        <label>First Name *</label>
                         <input type="text" className="form w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your Name" id="name" required="" />
+                        <label>Email Address *</label>
                         <input type="email" className="form w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="Enter your Email" id="name-3" required="" />
+                        <label>Your Age *</label>
                         <input type="text" className="form text-area w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="Enter Your Age" id="name-2" required=""/>
                         <input type="submit" value="Send" data-wait="Please wait..." className="submit-button w-button"/>
                     </form>
